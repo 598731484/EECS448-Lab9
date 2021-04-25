@@ -1,0 +1,38 @@
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form action="customerBackend.php" method="post">
+        Name: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text" name="name" id="name"><br>
+        Password: <input type="text" name="password" id="password"><br>
+        <h2>Items List</h2>
+        Pen <input type="number" name="pen" id="pen"><br>
+        Pan <input type="number" name="pan" id="pan"><br>
+        Pin &nbsp<input type="number" name="pin" id="pin"><br>
+
+        <h2>Shipping opition</h2>
+        <div>
+            <input type="radio" name="typesofShipping" id="free" value="Free 7 day" />
+            <label for="free">A) Free 7 day</label>
+            <br>
+            <input type="radio" name="typesofShipping" id="overNight" value="50.00 over night" />
+            <label for="overNight">B) 50.00 over night</label>
+            <br>
+            <input type="radio" name="typesofShipping" id="threeDay" value="5.00 three day" />
+            <label for="threeDay">C) 5.00 three day</label>
+        </div>
+
+
+        <input type="submit"><input type="reset">
+    </form>
+    <button id="verify" onclick="showMessage()" type="button">Verify</button>
+    <div id="message">
+        <p id="number" style="display:none">Quantities cannot be negative!</p>
+        <p id="mail" style="display:none">Username error! (name@domain.com)</p>
+        <p id="pass" style="display:none">Password field cannot be blank!</p>
+        <p id="ship" style="display:none">Hey! Pick one!</p>
+    </div>
+</body>
+<script type="text/javascript" src="formChecker.js"></script>
+</html>
